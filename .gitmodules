@@ -2,3 +2,6 @@
 	path = DeepCloner
 	url = https://github.com/DemoJameson/DeepCloner.git
 	branch = feature/customProcessor
+[submodule "Compare-Net-Objects"]
+	path = Compare-Net-Objects
+	url = https://github.com/burgerhex/Compare-Net-Objects.git
