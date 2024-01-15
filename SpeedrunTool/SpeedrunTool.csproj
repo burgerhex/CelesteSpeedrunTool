@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <ProjectGuid>{C7DFDD37-907C-4A75-96DA-1C5828C97F96}</ProjectGuid>
         <RootNamespace>Celeste.Mod.SpeedrunTool</RootNamespace>
@@ -80,6 +80,12 @@
             <Link>Source\DeepCloner\%(RecursiveDir)%(FileName)%(Extension)</Link>
         </Compile>
         <Compile Remove="..\DeepCloner\DeepCloner\Properties\**" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="..\Compare-Net-Objects\Compare-Net-Objects\**\*.cs">
+            <Link>Source\Compare-Net-Objects\%(RecursiveDir)%(FileName)%(Extension)</Link>
+        </Compile>
+        <!--<Compile Remove="..\Compare-Net-Objects\Compare-Net-Objects\Properties\**" />-->
     </ItemGroup>
     <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(Configuration)' == 'Release'">
         <Delete Files="$(TargetDir)JetBrains.Profiler.Api.dll" />
